@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.bamboocando.redirect"
+        version="0.7.0">
+
+  <name>Redirect</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/redirect.js" target="js/redirect.js"/>
+
+  <js-module src="www/redirect.js" name="redirect">
+    <clobbers target="redirect" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Hello">
+        <param name="android-package" value="com.example.plugin.Hello"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Redirect">
+        <param name="ios-package" value="HWPRedirect" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/HWPRedirect.h" target-dir="RedirectPlugin"/>
+    <source-file src="src/ios/HWPRedirect.m" target-dir="RedirectPlugin"/>
+  </platform>
+
+  <platform name="wp7">
+    <source-file src="src/wp7/Hello.cs"/>
+  </platform>
+
+</plugin>
