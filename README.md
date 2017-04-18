@@ -1,9 +1,9 @@
 # Cordova Redirect Plugin
 
-Simple plugin that attempts to redirect stderr to a file in iOS for logging purposes.
+Simple plugin that attempts to redirect logio to a file in iOS for logging purposes.
 
-when invoked, this plugin will redirect the current stderr handle the file name specified by the javscript caller
-to the app's Document directory.  All writes to stderr (NSLog) will be appended to the file name specified.
+when invoked, this plugin will redirect the current logio handle the file name specified by the javscript caller
+to the app's Document directory.  All writes to logio (NSLog) will be appended to the file name specified.
 
 ## Using
 
@@ -28,7 +28,7 @@ Edit `www/js/index.js` and add the following code inside `onDeviceReady`
         alert("Error calling Hello Plugin");
     }
 
-    hello.greet("World", success, failure);
+    redirect.logio("World", success, failure);
 ```
 
 Install iOS platform

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.bamboocando.redirect"
+        id="cordova-plugin-ddjslog"
         version="0.7.0">
 
-  <name>Redirect</name>
+  <name>DDJSLogger</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
-  <asset src="www/redirect.js" target="js/redirect.js"/>
+  <asset src="www/ddjslog.js" target="js/ddjslog.js"/>
 
-  <js-module src="www/redirect.js" name="redirect">
-    <clobbers target="redirect" />
+  <js-module src="www/ddjslog.js" name="ddjslog">
+    <clobbers target="DDJSLogger" />
   </js-module>
 
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Hello">
+      <feature name="DDJSLogger">
         <param name="android-package" value="com.example.plugin.Hello"/>
       </feature>
     </config-file>
@@ -29,13 +29,13 @@
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="Redirect">
-        <param name="ios-package" value="HWPRedirect" />
+      <feature name="DDJSLogger">
+        <param name="ios-package" value="DDJSLogger" onload="true"/>
       </feature>
     </config-file>
 
-    <header-file src="src/ios/HWPRedirect.h" target-dir="RedirectPlugin"/>
-    <source-file src="src/ios/HWPRedirect.m" target-dir="RedirectPlugin"/>
+    <header-file src="src/ios/dd-js-logger.h" target-dir="DDJSLoggerPlugin"/>
+    <source-file src="src/ios/dd-js-logger.m" target-dir="DDJSLoggerPlugin"/>
   </platform>
 
   <platform name="wp7">

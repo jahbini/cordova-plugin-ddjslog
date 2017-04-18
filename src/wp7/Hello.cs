@@ -6,7 +6,7 @@ namespace Cordova.Extension.Commands
 {
     public class Redirect : BaseCommand
     {
-        public void stderr(string args)
+        public void logio(string args)
         {
             string name = JsonHelper.Deserialize<string>(args);
             string message = "Hello, " + name;
