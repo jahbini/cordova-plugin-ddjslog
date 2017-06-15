@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-ddjslog",
+  "version": "0.7.0",
+  "description": "send js log files to iOS system log via lumberjack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahbini/cordova-plugin-ddjslog.git"
+  },
+  "keywords": [
+    "log",
+    "lumberjack",
+    "javascript"
+  ],
+  "author": "James A. Hinds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jahbini/cordova-plugin-ddjslog/issues"
+  },
+  "homepage": "https://github.com/jahbini/cordova-plugin-ddjslog#readme"
+}
